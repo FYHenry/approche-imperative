@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/approche-iperative.iml" filepath="$PROJECT_DIR$/approche-iperative.iml" />
+      <module fileurl="file://$PROJECT_DIR$/approche-imperative.iml" filepath="$PROJECT_DIR$/approche-imperative.iml" />
     </modules>
   </component>
 </project>

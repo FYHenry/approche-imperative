@@ -1,10 +1,16 @@
 package fr.declaration.variable;
 
-public class Main {
+public class VariableApp {
+    /**
+     * @param args console input
+     */
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        System.out.printf("Arguments :\n\t%d%n", args.length);
-        System.out.println();
+        System.out.printf("Arguments number : \u001b[31m%d\u001b[0m\n", args.length);
+        System.out.println("Args :");
+        for (String arg: args) {
+            System.out.printf("\t\u001b[33m%s\u001b[0m\n", arg);
+        }
         byte byteNumber = 1;
         short shortNumber = 1;
         int intNumber = 1;
