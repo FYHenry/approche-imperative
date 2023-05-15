@@ -12,7 +12,13 @@ public class AffichageInverse {
         for (int i = array.length - 1; i > 0; i--) {
             System.out.printf("%+3d ", array[i]);
         }
-        System.out.printf("\n");
         int[] arrayCopy = array.clone();
+        if(arrayCopy == array) {
+            System.out.printf("\n\u001b[33mThe clone of the integers array is the same array.\u001b[0m\n");
+        } else {
+            System.out.printf("\n\u001b[33mThe clone of the integers array isn't the same array.\u001b[0m\n");
+        }
+
+
     }
 }
