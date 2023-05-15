@@ -3,7 +3,7 @@ package fr.declaration.variable;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        System.out.println(String.format("Arguments :\n\t%d", args.length));
+        System.out.printf("Arguments :\n\t%d%n", args.length);
         System.out.println();
         byte byteNumber = 1;
         short shortNumber = 1;
