@@ -3,6 +3,8 @@ package fr.declaration.variable;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
+        System.out.println(String.format("Arguments :\n\t%d", args.length));
+        System.out.println();
         byte byteNumber = 1;
         short shortNumber = 1;
         int intNumber = 1;
@@ -19,7 +21,7 @@ public class Main {
         System.out.println("byte : " + String.format("%c", charNumber));
         System.out.println("byte : " + String.format("%s", booleanNumber));
         System.out.println("byte : " + String.format("%s", stringNumber));
-        String randomString = "Voici le résultat d’un calcul :\n1+5=6";
+        String randomString = "Voici le résultat d’un calcul :\n\t1+5=6";
         System.out.println(randomString);
     }
 }
