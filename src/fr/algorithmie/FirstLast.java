@@ -1,9 +1,9 @@
 package fr.algorithmie;
 
-public class FirstLast6 {
+public class FirstLast {
     /**
      * When the array arguments are all numerical the class-command returns
-     * "true" if the first or the last elements is 6.
+     * "true" if the first element equals the last element.
      * If not "false" is returned.
      *
      * @param args Numerical arguments from the terminal.
@@ -18,7 +18,7 @@ public class FirstLast6 {
             for (int i = 0; i < args.length; i++) {
                 array[i] = Integer.decode(args[i]);
             }
-            boolean itIsTrue = firstOrLastIs6(array);
+            boolean itIsTrue = firstEqualsLast(array);
             if(itIsTrue){
                 System.out.printf("true\n");
             } else {
@@ -29,18 +29,17 @@ public class FirstLast6 {
             System.exit(1);
         }
     }
-
     /**
-     * Evaluates "true" when the first or the last elements are 6 from
+     * Evaluates "true" when the first element equals the last from
      * a non-null array.
      * Else it returns "false".
      *
      * @param array Relative integers array
      * @return Boolean result
      */
-    private static boolean firstOrLastIs6(int[] array){
+    private static boolean firstEqualsLast(int[] array){
         if(array.length > 0){
-            return array[0] == 6 || array[array.length - 1] == 6;
+            return array[0] == array[array.length - 1];
         }
         return false;
     }

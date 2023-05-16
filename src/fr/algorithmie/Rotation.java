@@ -1,10 +1,9 @@
 package fr.algorithmie;
 
-public class FirstLast6 {
+public class Rotation {
     /**
      * When the array arguments are all numerical the class-command returns
-     * "true" if the first or the last elements is 6.
-     * If not "false" is returned.
+     * the right-rotated version.
      *
      * @param args Numerical arguments from the terminal.
      */
@@ -18,30 +17,29 @@ public class FirstLast6 {
             for (int i = 0; i < args.length; i++) {
                 array[i] = Integer.decode(args[i]);
             }
-            boolean itIsTrue = firstOrLastIs6(array);
-            if(itIsTrue){
-                System.out.printf("true\n");
-            } else {
-                System.out.printf("false\n");
+            int[] newArray = rightRotated(array);
+            System.out.printf("\u001b[33mRight-rotated array :\u001b[0m\n");
+            for (int nbr: newArray) {
+                System.out.printf("%+3d ", nbr);
             }
+            System.out.printf("\n");
             System.exit(0);
         } else {
             System.exit(1);
         }
     }
-
     /**
-     * Evaluates "true" when the first or the last elements are 6 from
-     * a non-null array.
-     * Else it returns "false".
+     * Right-rotator. One element to right.
      *
      * @param array Relative integers array
-     * @return Boolean result
+     * @return Right-rotated array.
      */
-    private static boolean firstOrLastIs6(int[] array){
-        if(array.length > 0){
-            return array[0] == 6 || array[array.length - 1] == 6;
+    private static int[] rightRotated(int[] array){
+        int[] newArray = new int[array.length];
+        newArray[0] = array[array.length - 1];
+        for(int i = 0; i < array.length-1; i++){
+            newArray[i+1] = array[i];
         }
-        return false;
+        return newArray;
     }
 }
