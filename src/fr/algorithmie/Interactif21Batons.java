@@ -7,7 +7,8 @@ public class Interactif21Batons {
         Scanner scanner = new Scanner(System.in);
         int batonnetsRestants = 21;
         boolean gagne = false;
-        System.out.printf("""
+        System.out.print("""
+                \u001b[33m
                 Taa ta ta ta ta taaaaa !
 
                 Vous affronterez le Maître du Jeu.
@@ -17,25 +18,25 @@ public class Interactif21Batons {
                 Bonne chance.
                 
                 À vous de commencer.
-                Retirez (1), (2) ou (3) bâtonnets.
+                Retirez (1), (2) ou (3) bâtonnets.\u001b[0m
                 """);
         while(batonnetsRestants > 0){
             switch (batonnetsRestants) {
-                case 1 -> System.out.printf("(1) :");
-                case 2 -> System.out.printf("(1|2) :");
-                default -> System.out.printf("(1|2|3) :");
+                case 1 -> System.out.print("\u001b[33m(1) : \u001b[0m");
+                case 2 -> System.out.print("\u001b[33m(1|2) : \u001b[0m");
+                default -> System.out.print("\u001b[33m(1|2|3) : \u001b[0m");
             }
             final int REPONSE_DU_JOUEUR = scanner.nextInt();
             if(REPONSE_DU_JOUEUR <= batonnetsRestants && REPONSE_DU_JOUEUR > 0 && REPONSE_DU_JOUEUR < 4) {
                 batonnetsRestants -= REPONSE_DU_JOUEUR;
-                System.out.printf("\nSur le plateau : ");
+                System.out.print("\n\u001b[33mSur le plateau : \u001b[32m");
                 for(int i = 0; i < batonnetsRestants; i++){
-                    System.out.printf("|");
+                    System.out.print("|");
                 }
-                System.out.printf("\n");
+                System.out.print("\u001b[0m\n");
                 gagne = batonnetsRestants == 0;
             } else {
-                System.out.printf("Choisissez un bon nombre de bâtonnets.\n");
+                System.out.print("\u001b[33mChoisissez un bon nombre de bâtonnets.\u001b[0m\n");
                 continue;
             }
             if(gagne){
@@ -49,28 +50,28 @@ public class Interactif21Batons {
             }
             if(reponseDuMaitre == 1){
                 batonnetsRestants -= 1;
-                System.out.printf("Le Maître enlève 1 bâtonnet du plateau.\n");
+                System.out.print("\u001b[33mLe Maître enlève 1 bâtonnet du plateau.\u001b[0m\n");
             } else {
                 batonnetsRestants -= reponseDuMaitre;
-                System.out.printf("Le Maître enlève %d bâtonnets du plateau.\n", reponseDuMaitre);
+                System.out.printf("\u001b[33mLe Maître enlève %d bâtonnets du plateau.\u001b[0m\n", reponseDuMaitre);
             }
-            System.out.printf("Sur le plateau : ");
+            System.out.print("\u001b[33mSur le plateau : \u001b[32m");
             for(int i = 0; i < batonnetsRestants; i++){
-                System.out.printf("|");
+                System.out.print("|");
             }
-            System.out.printf("\n");
+            System.out.print("\u001b[0m\n");
         }
         if(gagne){
-            System.out.printf("""
-                    Bravo!
+            System.out.print("""
+                    \u001b[33mBravo!
                     Grâce à votre détermination infaillible vous avez vaincu!
-                    Le Maître du Jeu s’en mord les doigts avant de disparaître dans l’obscurité.
+                    Le Maître du Jeu s’en mord les doigts avant de disparaître dans l’obscurité.\u001b[0m
                     """);
         } else {
-            System.out.printf("""
-                    Vous avez échoué!
+            System.out.print("""
+                    \u001b[33mVous avez échoué!
                     Une fois de plus le Maître du Jeu prouve supériorité face aux novices.
-                    Retenterez-vous votre chance?
+                    Retenterez-vous ce défi?\u001b[0m
                     """);
         }
     }
