@@ -18,14 +18,21 @@ public class FirstLast6 {
             for (int i = 0; i < args.length; i++) {
                 array[i] = Integer.decode(args[i]);
             }
-            boolean result = eval(array);
+            boolean itIsTrue = firstOrLastIs6(array);
+            if(itIsTrue){
+                System.out.printf("true\n");
+            } else {
+                System.out.printf("false\n");
+            }
             System.exit(0);
         } else {
             System.exit(1);
         }
     }
-    private static boolean eval(int[] array){
-
+    private static boolean firstOrLastIs6(int[] array){
+        if(array.length > 0){
+            return array[0] == 6 || array[array.length - 1] == 6;
+        }
         return false;
     }
 }
