@@ -29,8 +29,8 @@ public class FabriquerMur {
      */
     static boolean fabriquerMur(int nbSmall, int nbBig, int longueur) {
         boolean resultat = false;
-        for(int bNbr = 0; bNbr < nbBig; bNbr++){
-            for(int sNbr = 0; sNbr < nbSmall; sNbr++){
+        for(int bNbr = 0; bNbr <= nbBig; bNbr++){
+            for(int sNbr = 0; sNbr <= nbSmall; sNbr++){
                 resultat = resultat || bNbr * 5 + sNbr == longueur;
             }
         }
@@ -39,7 +39,7 @@ public class FabriquerMur {
     private static void verifier(int nbSmall, int nbBig, int longueur, boolean b)
     {
         if (!fabriquerMur(nbSmall, nbBig, longueur) == b) {
-            System.err.println("Test (" + nbSmall + ", " + nbBig + ", " +
+            System.out.println("Test (" + nbSmall + ", " + nbBig + ", " +
                     longueur + ") NON passant.");
         }
     }
