@@ -6,7 +6,7 @@ public class Interactif21Batons {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int batonnetsRestants = 21;
-        boolean gagne = false;
+        boolean perdu = false;
         System.out.print("""
                 \u001b[33m
                 Taa ta ta ta ta taaaaa !
@@ -34,12 +34,12 @@ public class Interactif21Batons {
                     System.out.print("|");
                 }
                 System.out.print("\u001b[0m\n");
-                gagne = batonnetsRestants == 0;
+                perdu = batonnetsRestants == 0;
             } else {
                 System.out.print("\u001b[33mChoisissez un bon nombre de bâtonnets.\u001b[0m\n");
                 continue;
             }
-            if(gagne){
+            if(perdu){
                 continue;
             }
             int reponseDuMaitre;
@@ -61,17 +61,19 @@ public class Interactif21Batons {
             }
             System.out.print("\u001b[0m\n");
         }
-        if(gagne){
+        if(perdu){
             System.out.print("""
-                    \u001b[33mBravo!
-                    Grâce à votre détermination infaillible vous avez vaincu!
-                    Le Maître du Jeu s’en mord les doigts avant de disparaître dans l’obscurité.\u001b[0m
-                    """);
-        } else {
-            System.out.print("""
+                    
                     \u001b[33mVous avez échoué!
                     Une fois de plus le Maître du Jeu prouve supériorité face aux novices.
                     Retenterez-vous ce défi?\u001b[0m
+                    """);
+        } else {
+            System.out.print("""
+                    
+                    \u001b[33mBravo!
+                    Grâce à votre détermination infaillible vous avez vaincu!
+                    Le Maître du Jeu s’en mord les doigts avant de disparaître dans l’obscurité.\u001b[0m
                     """);
         }
     }
