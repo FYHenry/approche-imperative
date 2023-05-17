@@ -7,14 +7,14 @@ public class InversionContenu {
         for(int i = 0; i < arrayCopy.length; i++){
             arrayCopy[i] = array[arrayCopy.length - 1 - i];
         }
-        System.out.printf("\u001b[33mArray sorted elements :\u001b[0m\n");
+        System.out.print("\u001b[33mArray sorted elements :\u001b[0m\n");
         for (int nbr: array) {
             System.out.printf("%+3d ", nbr);
         }
-        System.out.printf("\n\u001b[33mArray copy retro-sorted elements :\u001b[0m\n");
+        System.out.print("\n\u001b[33mArray copy retro-sorted elements :\u001b[0m\n");
         for (int nbr: arrayCopy) {
             System.out.printf("%+3d ", nbr);
         }
-        System.out.printf("\n");
+        System.out.print("\n");
     }
 }

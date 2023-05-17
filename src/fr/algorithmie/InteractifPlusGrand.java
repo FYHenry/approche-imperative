@@ -7,7 +7,6 @@ public class InteractifPlusGrand {
         Scanner scanner = new Scanner(System.in);
         int greatest = Integer.MIN_VALUE;
         String addedNumbers = "";
-        final String INPUT_END = "\u001b[0m";
         System.out.printf("\u001b[33mInteger #01 :%s\u001b[0m   ", addedNumbers);
         for (int i = 0; i < 10; i++) {
             final int NBR = scanner.nextInt();

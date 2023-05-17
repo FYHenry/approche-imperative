@@ -18,11 +18,11 @@ public class Rotation {
                 array[i] = Integer.decode(args[i]);
             }
             int[] newArray = rightRotated(array);
-            System.out.printf("\u001b[33mRight-rotated array :\u001b[0m\n");
+            System.out.print("\u001b[33mRight-rotated array :\u001b[0m\n");
             for (int nbr: newArray) {
                 System.out.printf("%+3d ", nbr);
             }
-            System.out.printf("\n");
+            System.out.print("\n");
             System.exit(0);
         } else {
             System.exit(1);

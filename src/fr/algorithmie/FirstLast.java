@@ -20,9 +20,9 @@ public class FirstLast {
             }
             boolean itIsTrue = firstEqualsLast(array);
             if(itIsTrue){
-                System.out.printf("true\n");
+                System.out.print("true\n");
             } else {
-                System.out.printf("false\n");
+                System.out.print("false\n");
             }
             System.exit(0);
         } else {

@@ -22,10 +22,10 @@ public class SommeDeTableauxDiff {
                 array2[i] = array0[i];
             }
         }
-        System.out.printf("\n\u001b[33mSum array :\u001b[0m\n");
+        System.out.print("\n\u001b[33mSum array :\u001b[0m\n");
         for (int nbr: array2) {
             System.out.printf("%+3d ", nbr);
         }
-        System.out.printf("\n");
+        System.out.print("\n");
     }
 }

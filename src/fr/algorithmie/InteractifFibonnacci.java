@@ -7,7 +7,7 @@ public class InteractifFibonnacci {
         Scanner scanner = new Scanner(System.in);
         int N = -1;
         while(N < 0){
-            System.out.printf("\u001b[33mFibonnacci rank (natural integer): \u001b[0m");
+            System.out.print("\u001b[33mFibonnacci rank (natural integer): \u001b[0m");
             N = scanner.nextInt();
         }
         System.out.printf("\u001b[33mFibonnacci sum to rank %d: \u001b[0m%d", N, sumTo(N));

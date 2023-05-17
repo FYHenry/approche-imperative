@@ -8,7 +8,7 @@ public class ExerciceTableauEntier {
         }
         System.out.printf("First element : %d", intTable[0]);
         System.out.printf("Table length : %d", intTable.length);
-        System.out.printf("Last element : %d", intTable[intTable.length]);
+        System.out.printf("Last element : %d", intTable[intTable.length-1]);
         intTable[4] = 8;
     }
 }

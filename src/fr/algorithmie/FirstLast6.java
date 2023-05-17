@@ -20,9 +20,9 @@ public class FirstLast6 {
             }
             boolean itIsTrue = firstOrLastIs6(array);
             if(itIsTrue){
-                System.out.printf("true\n");
+                System.out.print("true\n");
             } else {
-                System.out.printf("false\n");
+                System.out.print("false\n");
             }
             System.exit(0);
         } else {
